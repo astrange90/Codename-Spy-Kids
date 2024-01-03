@@ -1,13 +1,5 @@
 // Assignment code here
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-var passwordText = document.querySelector("#password");
-  var length = 128;
-
-  var upperCase = [
+var upperCase = [
   'A',
   'B',
   'C',
@@ -33,7 +25,7 @@ var passwordText = document.querySelector("#password");
   'W',
   'X',
   'Y',
-  'Z',
+  'Z'
   ];
  
   var lowerCase = [
@@ -62,7 +54,7 @@ var passwordText = document.querySelector("#password");
   'w',
   'x',
   'y',
-  'z',
+  'z'
 ];
   
   var number = ['0','1','2','3','4','5','6','7','8','9'];
@@ -94,29 +86,45 @@ var passwordText = document.querySelector("#password");
   '{',
   '|',
   '}',
-  '~',
+  '~'
 ];
 
-  var writePassword = upperCase + lowerCase + number + symbol;
+  function getPasswordChoices() {
+    var hasSpecialChars = confirm('Click ok to confirm to include special characters in your password');
+    var hasUpperChars = confirm('Click ok to confirm to include uppercase characters in your password');
+    var hasLowerChars = confirm('Click ok to confirm to include lowercase characters in your password');
+    var hasNumericChars = confirm('Click ok to confirm to include numeric characters in your password');
 
+    if(hasSpecialChars === false && hasUpperChars === false && hasLowerChars === false && hasNumericChars === false ) {
+      alert('Must select at least one option');
+      return;
+    }
+
+    var options = {
+      hasLowerChars: hasLowerChars,
+      hasNumericChars: hasNumericChars,
+      hasUpperChars: hasUpperChars,
+      hasSpecialChars: hasSpecialChars
+    };
+
+    return options;
+  }
+
+  function generatePassword() {
+    var passwordOptions = getPasswordChoices();
+    
+  }
+  
+  // Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+    
+// Write password to the #password input
   function writePassword() {
-    
-    
-    // if (Password) {
-    // Password == upperCase[Math.floor(Math.random() * upperCase.length)];
-    // Password == lowerCase[Math.floor(Math.random() * lowerCase.length)];
-    // Password == number[Math.floor(Math.random() * number.length)];
-    // password == Symbol[Math.floor(Math.random() * Symbol.length)];
-    // } else if (length) >= password.length) {
-    //   password += writePassword[Math.floor(Math.random() * writePassword.length)];
-    // } else {
-    //   console.log("Password does not meet criteria");
-    // }
-    // return;
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
-};
+    passwordText.value = password;
+  }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
