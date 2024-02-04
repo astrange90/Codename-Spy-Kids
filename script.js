@@ -1,4 +1,4 @@
-// Assignment code here
+// Variable Arrays entered for characters of uppercase, lowercase, number, symbol.
 var upperCase = [
   'A',
   'B',
@@ -88,14 +88,14 @@ var symbol = [
   '}',
   '~'
 ];
-
+//Password character confirm choices  
 function getPasswordChoices() {
-  var hasSpecialChars = confirm('Click ok to confirm to include special characters in your password');
   var hasUpperChars = confirm('Click ok to confirm to include uppercase characters in your password');
   var hasLowerChars = confirm('Click ok to confirm to include lowercase characters in your password');
   var hasNumericChars = confirm('Click ok to confirm to include numeric characters in your password');
+  var hasSpecialChars = confirm('Click ok to confirm to include special characters in your password');
 
-  if (hasSpecialChars === false && hasUpperChars === false && hasLowerChars === false && hasNumericChars === false) {
+  if (hasUpperChars === false && hasLowerChars === false && hasNumericChars === false && hasSpecialChars === false) {
     alert('Must select at least one option');
     return;
   }
@@ -111,11 +111,11 @@ function getPasswordChoices() {
 }
 
 function generatePassword() {
-  var passwordLength = prompt('Enter numbers 8-128 for the total characters desired for generated password')
+  var passwordLength = prompt('Enter numbers 8-100 for the total characters desired for generated password')
   var options = getPasswordChoices();
   var userChoices = [];
-  if (passwordLength < 8 || passwordLength > 128) {
-    alert('The number entered did not meet the criteria for character length. Please enter a number of 8-128');
+  if (passwordLength < 8 || passwordLength > 100) {
+    alert('The number entered for password length did not meet the criteria. Please try again and enter a number of 8-100 in your first choice');
     return;
   }
 
@@ -150,5 +150,5 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// Add event listener to generate button
+// Event listener to generate button
 generateBtn.addEventListener("click", writePassword);
