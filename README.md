@@ -1,6 +1,6 @@
 # Codename-Spy-Kids
 - Came back motivated to finishing this challenge, because in earlier development I had a non functional password generator.
-- The understanding of arrays, if statements, conditional statements, and the math method, helped me execute a functional password generator.
+- The understanding of arrays, if statements, conditional statements, and the math method helped me execute a functional password generator.
 
 ## User Story
 
@@ -38,17 +38,17 @@ The following image shows the web application's appearance and functionality:
 
 ## Usage
 
-- When user first presses the "Generate Password" button, then user will be prompted to input a number between 8-100 for total characters.
+- When user first presses the "Generate Password" button, then user will be prompted to input a number between 8-100 for total characters. ![A User choice asking for a keyboard input of a number between 8-100](<Assets/Characters Total Choices.png>)
 
-- After inputted character length then user will be given choices of uppercase, lowercase, numeric, and special characters to be part of their password.
+- After inputted character length then user will be given choices of uppercase, lowercase, numeric, and special characters to be part of their password. ![A User choice showing uppercase, click to confirm or cancel](<Assets/User Choice of characters.png>)
 
-- After all choices are made then there is a random generated password. 
+- After all choices are made then there is a random generated password. ![Random Password Generated image](<Assets/Generated Password.png>)
 
 ## Credits
-Javascript Tutorial
+- Javascript Tutorial
 https://www.youtube.com/playlist?list=PL4cUxeGkcC9i9Ae2D9Ee1RvylH38dKuET
 
-Math.round and Math.floor info
+- Math.round and Math.floor info
 https://stackoverflow.com/questions/5915096/get-a-random-item-from-a-javascript-array
 
 https://www.w3schools.com/java/java_math.asp
