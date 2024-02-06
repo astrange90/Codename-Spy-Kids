@@ -38,7 +38,7 @@ The following image shows the web application's appearance and functionality:
 
 ## Usage
 
-- When user first presses the "Generate Password" button, then user will be prompted to input a number between 8-100 for total characters. ![A User choice asking for a keyboard input of a number between 8-100](![A User choice asking for a keyboard input of a number between 8-100](<Assets/Character Choices Total.png>))
+- When user first presses the "Generate Password" button, then user will be prompted to input a number between 8-100 for total characters. ![A User choice asking for a keyboard input of a number between 8-100](<Assets/Character Choices Total.png>)
 
 - After inputted character length then user will be given choices of uppercase, lowercase, numeric, and special characters to be part of their password. ![A User choice showing uppercase, click to confirm or cancel](<Assets/User Choice of characters.png>)
 
