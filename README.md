@@ -44,6 +44,8 @@ The following image shows the web application's appearance and functionality:
 
 - After all choices are made then there is a random generated password. ![Random Password Generated image](<Assets/Generated Password.png>)
 
+- Deployed Link: https://astrange90.github.io/Codename-Spy-Kids/
+
 ## Credits
 - Javascript Tutorial
 https://www.youtube.com/playlist?list=PL4cUxeGkcC9i9Ae2D9Ee1RvylH38dKuET
